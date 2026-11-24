@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+:root {
+    --fondo: #fff5f8; 
+    --texto: #5c3d4b;    
+    --vino: #a8506f;     
+    --acento: #ffd6e4;   
+    --gris: #8f7380;     
+    --blanco: #fff;
+    --linea: #f6dfe7;   
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.encabezado {
+    height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--fondo);
+    border-bottom: 1px solid var(--linea);
+}
+
+.logo {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--vino);
+}
+
+.icono-logo {
+    color: #972a37;
+    font-size: 1.4rem;
+    margin-right: 7px;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    font-size: .9rem;
+    color: #757b5e;
+    padding: 9px 0;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: var(--vino);
+}
+
+.portada {
+    min-height: 570px;
+    background: var(--vino);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 65px 7%;
+    gap: 55px;
+}
+
+.portada-contenido {
+    max-width: 560px;
+}
+
+.etiqueta,
+.numero {
+    font-size: .72rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #972a37;
+}
+
+.portada h1,
+.portada-interior h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
+    line-height: 1.04;
+    margin: 22px 0;
+}
+
+.portada h1 em {
+    color: var(--acento);
+}
+
+.portada-texto {
+    color: #d1d5e0;
+    max-width: 470px;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-flex;
+    gap: 30px;
+    align-items: center;
+    background: var(--acento);
+    color: var(--vino);
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: .9rem;
+    transition: .2s;
+}
+
+.boton span {
+    font-size: 1.25rem;
+}
+
+.boton-claro {
+    background: white;
+}
+
+.portada-imagen {
+    height: 410px;
+    position: relative;
+}
+
+.portada-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-nota {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--acento);
+    color: var(--vino);
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 13px;
+}
+
+.seccion {
+    padding: 90px 7%;
+}
+
+.presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12%;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.15;
+    color: var(--vino);
+}
+
+.presentacion p:last-child {
+    font-size: 1.08rem;
+    color: var(--gris);
+    max-width: 570px;
+}
+
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 35px;
+}
+
+.encabezado-seccion h2 {
+    margin-top: 10px;
+}
+
+.enlace {
+    font-weight: 700;
+    color: var(--vino);
+    padding-bottom: 5px;
+}
+
+.enlace span {
+    margin-left: 12px;
+}
+
+.tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.tarjeta {
+    background: white;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.tarjeta img {
+    width: 38%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta-info {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tarjeta-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--vino);
+    margin: 10px 0;
+}
+
+.tarjeta-info p {
+    color: var(--gris);
+    font-size: 1rem;
+    max-width: 600px;
+    margin-bottom: 18px;
+}
+
+.tarjeta-info a {
+    font-size: .88rem;
+    font-weight: 700;
+    color: #a8506f;
+    background: var(--acento);
+    width: fit-content;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.franja {
+    background: var(--vino);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.franja h2 {
+    color: white;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 15px 0 28px;
+}
+
+.pie {
+    padding: 28px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid var(--linea);
+    font-size: .82rem;
+    color: var(--gris);
+}
+
+.pie p {
+    margin: 0;
+}
+
+.portada-interior {
+    background: var(--vino);
+    color: white;
+    padding: 85px 10% 75px;
+}
+
+.portada-interior h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin: 12px 0;
+}
+
+.portada-interior > p:not(.etiqueta) {
+    color: #d1d5e0;
+    max-width: 570px;
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+}
+
+.portada-interior .enlace {
+    color: var(--acento);
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.lista-exposiciones {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.exposicion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7%;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.exposicion:last-child {
+    margin-bottom: 0;
+}
+
+.exposicion img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.exposicion h2 {
+    font-size: 2.5rem;
+    margin: 12px 0;
+}
+
+.exposicion p {
+    color: var(--gris);
+    margin-bottom: 24px;
+    max-width: 540px;
+}
+
+.exposicion-inversa img {
+    order: 2;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.galeria figure {
+    background: white;
+}
+
+.galeria img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria figcaption {
+    padding: 17px 20px;
+    color: var(--gris);
+    font-size: .9rem;
+}
+
+.galeria figcaption strong {
+    color: var(--vino);
+    font-size: 1rem;
+}
+
+.datos-visita {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.ficha {
+    background: white;
+    padding: 32px;
+}
+
+.ficha h2 {
+    font-size: 1.9rem;
+    margin: 12px 0 22px;
+}
+
+.ficha p {
+    color: var(--gris);
+    margin-bottom: 15px;
+}
+
+.ficha strong {
+    color: var(--vino);
+}
+
+.ficha a:not(.enlace) {
+    color: #972a37;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: .9rem;
+}
+
+th {
+    color: var(--vino);
+    font-weight: 700;
+    background: #f1f2e9;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--linea);
+}
+
+td:last-child,
+th:last-child {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.nota {
+    font-size: .78rem;
+    margin-top: 15px;
+}
+
+.aviso {
+    padding-top: 0;
+}
+
+.aviso p {
+    color: var(--gris);
+    max-width: 700px;
+    margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+
+    .encabezado {
+        height: auto;
+        min-height: 75px;
+        padding: 18px 5%;
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .menu {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .portada {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+        gap: 35px;
+    }
+
+    .portada-imagen {
+        height: 300px;
+    }
+
+    .presentacion {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .exposicion {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .exposicion-inversa img {
+        order: 0;
+    }
+
+    .datos-visita {
+        grid-template-columns: 1fr;
+    }
+
+    .pie {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta {
+        flex-direction: column;
+    }
+
+    .tarjeta img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .tarjeta-info {
+        padding: 22px;
+    }
+
+    .seccion {
+        padding: 60px 6%;
+    }
+
+    .portada-interior {
+        padding: 65px 6%;
+    }
+
+    .galeria img {
+        height: 260px;
+    }
+
+    .exposicion img {
+        height: 260px;
+    }
+
+    .encabezado-seccion {
+        align-items: flex-start;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .ficha {
+        padding: 23px 18px;
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        padding: 10px 7px;
+        font-size: .8rem;
+    }
+
+}
